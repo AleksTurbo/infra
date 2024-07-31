@@ -1,0 +1,15 @@
+---
+- hosts: all
+  become: true
+
+  roles:
+    - { role: 'swaptrasher' }
+
+  tasks:
+    - name: Retrieve swap summary
+      command: swapon -s -e
+      changed_when: false
+      register: summary
+    - name: "DEBUG | Check result:"
+      debug:
+        msg: "Check result: {{ summary.stdout }}"
