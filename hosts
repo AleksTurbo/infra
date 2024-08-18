@@ -1,3 +1,26 @@
+[db]
+serv-alkstrb-prod ansible_host=192.168.153.112
+
+[db:vars]
+hostname=serv-alkstrb-prod
+time_zone=Europe/Moscow
+swap_size=1G
+packages=mc,htop,rsync
+swapfile_path=/swapfile
+
 [web]
-srv-prod-w1 ansible_host=192.168.153.112 ansible_user=root
-srv-stage-w1 ansible_host=192.168.153.113 ansible_user=root
+serv-alkstrb-stage ansible_host=192.168.153.113
+
+[web:vars]
+hostname=serv-alkstrb-stage
+time_zone=Europe/Moscow
+swap_size=2G
+packages=git,zip,htop
+swapfile_path=/swapfile
+
+[ALL_SERVERS:children]
+db
+web
+
+[ALL_SERVERS:vars]
+time_zone=Europe/Moscow
