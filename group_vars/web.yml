@@ -1,4 +1,5 @@
 ---
+DockerComposeVersion: v2.29.1
 swap_size: 2G
 packages: 
    - git
