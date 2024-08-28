@@ -1,5 +1,6 @@
 ---
-DockerComposeVersion: v2.29.1
+DockerComposeVersion: 2.29.1
+nginx_worker_connections: 512
 swap_size: 2G
 packages: 
    - git

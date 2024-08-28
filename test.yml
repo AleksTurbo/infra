@@ -1,11 +1,11 @@
 ---
 - hosts: all
   tasks:
-  - name: update apt cache
+  - name: Update apt cache
     apt:
       update_cache: yes
     become: yes
 
 - hosts: all
   roles:
-     - { role: 'docker' }     
+     - { role: 'nginx' }     
