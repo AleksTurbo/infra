@@ -1,8 +1,17 @@
 ---
 DockerComposeVersion: 2.29.1
 nginx_worker_connections: 1024
+server_name: prod.home.loc
+app_location: pythoner
 swap_size: 1G
 packages: 
    - mc
    - htop
    - rsync
+user_list:
+  - name: "user1"
+    password: "111"
+  - name: "user2"
+    password: "222"
+  - name: "user3"
+    password: "333"  

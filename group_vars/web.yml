@@ -1,8 +1,17 @@
 ---
 DockerComposeVersion: 2.29.1
 nginx_worker_connections: 512
+server_name: stage.home.loc
+app_location: pythoner
 swap_size: 2G
 packages: 
    - git
    - zip
    - htop
+user_list:
+  - name: "user4"
+    password: "444"
+  - name: "user5"
+    password: "555"
+  - name: "user6"
+    password: "666"  
