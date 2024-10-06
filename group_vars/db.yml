@@ -8,6 +8,11 @@ packages:
    - mc
    - htop
    - rsync
+vault_keys_path: "kv/data/linuxfactory/pythoner/nginx/htpasswd/prod"
+vault_open_ssh_path: "kv/data/linuxfactory/ssh"
+vault_token: "hvs.CAESII92OTSohoR0-vFoyHpDGtKqqBczfydTa4ZVa8mkEgkrGh4KHGh2cy41enFleExTNDMweDNyTG84SWd0QTdYRnk"
+vault_server: "http://192.168.153.132:8200/"
+user_for_set_ssh_key: "user"
 user_list:
   - name: "user1"
     password: !vault |
