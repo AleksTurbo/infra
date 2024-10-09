@@ -1,0 +1,34 @@
+--- 
+- hosts: all
+  tasks:
+  - name: Update apt cache
+    apt:
+      update_cache: yes
+    become: yes
+    tags: always
+
+- hosts: all
+  tasks:
+    - name: Install soft
+      block:
+        - name: Install htop
+          apt:
+            name: 
+              - htop
+            state: present
+          tags: htop
+
+        - name: Install git
+          apt:
+            name: 
+              - git
+            state: present
+          tags: git
+
+        - name: Install mc
+          apt:
+            name: 
+              - mc
+            state: present
+          tags: mc
+      become: yes
