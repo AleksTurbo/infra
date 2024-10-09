@@ -1,0 +1,8 @@
+run_playbooks:
+  stage: setup
+  image:
+    name: "cytopia/ansible:latest"
+  script:
+    - ansible-playbook -i inventory/production.ini production.yml
+  tags:
+    - docker_runner
