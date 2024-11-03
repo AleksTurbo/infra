@@ -1,6 +1,7 @@
 ---
 DockerComposeVersion: 2.29.1
 nginx_worker_connections: 1024
+new_user: user72
 server_name: prod.home.loc
 app_location: pythoner
 swap_size: 1G
