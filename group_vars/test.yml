@@ -1,14 +1,14 @@
 ---
 DockerComposeVersion: 2.29.1
 nginx_worker_connections: 512
-server_name: stage.home.loc
+server_name: test.home.loc
 app_location: pythoner
 swap_size: 2G
 packages: 
    - git
    - zip
    - htop
-vault_keys_path: "kv/data/linuxfactory/pythoner/nginx/htpasswd/stage"
+vault_keys_path: "kv/data/linuxfactory/pythoner/nginx/htpasswd/test"
 vault_open_ssh_path: "kv/data/linuxfactory/ssh"
 vault_token: "hvs.GKunByihrGrA3jupgsRoxd5j"
 vault_server: "http://192.168.153.132:8200/"
